@@ -11,7 +11,7 @@ namespace LAB0Clientes.Controllers
         Cliente cliente2;
         Cliente cliente3;
         Cliente cliente4;
-
+        List<Cliente> ListaClientes;
         public HomeController(ILogger<HomeController> logger)
         {
             //inizializar
@@ -43,11 +43,17 @@ namespace LAB0Clientes.Controllers
                 Telefono = 12436,
                 Detalles = "cliente4"
                 };
+
+            ListaClientes = new List<Cliente>();
+            ListaClientes.Add(cliente1);
+            ListaClientes.Add(cliente2);
+            ListaClientes.Add(cliente3);
+            ListaClientes.Add(cliente4);
         }
 
-        public IActionResult Index()
+        public List<Cliente> Index()
         {
-            return View();
+             return ListaClientes;
         }
 
         public IActionResult Privacy()
