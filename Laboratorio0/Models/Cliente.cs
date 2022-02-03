@@ -1,8 +1,10 @@
-﻿using System;
+﻿namespace Laboratorio0.Models
 
-public class Class1
+public class Cliente
 {
-	public Class1()
-	{
-	}
+	public string nombre { get; set; };
+	public string apellido { get; set; };
+	public int dpi { get; set; };
+	public double saldo{ get; set; };
+	public int telefono { get; set; };
 }
